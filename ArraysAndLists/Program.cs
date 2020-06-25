@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
 
 namespace ArraysAndLists
 {
@@ -9,11 +11,40 @@ namespace ArraysAndLists
             //TODO:
 
             // Create an int Array and populate numbers 1-10
+            var numbers = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            var evens = new List<int>();
+            var odds = new List<int>();
 
             /* Create two Lists of type int.
              * Name one List "evens"
              * Name the other List "odds"
              */
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0 )
+                {
+                    evens.Add(num);
+                }
+                else 
+                {
+                    odds.Add(num);
+                }
+                
+               
+                        
+            }
+            Console.WriteLine($"evens list");
+            foreach (var num in evens)
+            {
+                Console.WriteLine(num);
+               
+            }
+            Console.WriteLine($"odds list");
+            foreach (var num in odds) 
+            {
+                Console.WriteLine(num);
+            }
 
             /* Using either a foreach or for loop,
              * nest an if statement to check to see
